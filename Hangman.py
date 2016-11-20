@@ -1,5 +1,7 @@
 #Hangman Game
 
+import ErrorCheck
+
 def menu():
     running = True
     while running == True:
@@ -7,7 +9,7 @@ def menu():
 1) Play Game
 2) Quit''')
         option = input('Choose An Option: ')
-        option = errorCheck(option,int,'Choose An Option: ')
+        option = ErrorCheck.errorCheck(option,int,'Choose An Option: ')
         if option == 1:
             print('This Game Is Currently a Work In Progress, Please Follow @aronhnt on github for updates')
         elif option == 2:
@@ -21,16 +23,5 @@ Lists of words - import a file?
 Not losing a life if letter guessed twice
 allowing only one letter to be entered e.g. aa would not be allowed
 other stuff i cant remember'''
-
-    
-def errorCheck(varName, type, question):
-    x=0
-    while x == 0:
-        try:
-            varName=type(varName)
-            x=1
-        except ValueError:
-            varName = input(question)
-    return varName
 
 menu()
