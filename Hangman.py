@@ -14,7 +14,8 @@ def menu():
             print('This Game Is Currently a Work In Progress, Please Follow @aronhnt on github for updates')
         elif option == 2:
             running = False
-
+    exit(0)
+ 
 def main():
     '''For this function, i will need to have:
 Number of incorrect attempts - 8
@@ -23,5 +24,12 @@ Lists of words - import a file?
 Not losing a life if letter guessed twice
 allowing only one letter to be entered e.g. aa would not be allowed
 other stuff i cant remember'''
-
+    FourL=[]
+    FiveL=[]
+    SixL=[]
+    SevenL=[]
+    EightL=[]
+    NineL=[]
+    TenL=[]
+    
 menu()
